@@ -16,13 +16,13 @@
     <ApplicationIdentification>
         <IPOfficeCode>{{sequenceListing.IPOfficeCode}}</IPOfficeCode>
         <ApplicationNumberText>{{sequenceListing.applicationNumberText}}</ApplicationNumberText>
-        <FilingDate>{{sequenceListing.filingDate.date}}</FilingDate>
+        <FilingDate>{{sequenceListing.filingDate}}</FilingDate>
     </ApplicationIdentification>
     <ApplicantFileReference>{{sequenceListing.applicantFileReference}}</ApplicantFileReference>
     <EarliestPriorityApplicationIdentification>
         <IPOfficeCode>{{sequenceListing.earliestPriorityIPOfficeCode}}</IPOfficeCode>
         <ApplicationNumberText>{{sequenceListing.earliestPriorityApplicationNumberText}}</ApplicationNumberText>
-        <FilingDate>{{sequenceListing.earliestPriorityFilingDate.date}}</FilingDate>
+        <FilingDate>{{sequenceListing.earliestPriorityFilingDate}}</FilingDate>
     </EarliestPriorityApplicationIdentification>
     <ApplicantName languageCode="{{sequenceListing.applicantNameLanguageCode}}">
         {{sequenceListing.applicantName}}

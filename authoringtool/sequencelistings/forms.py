@@ -6,6 +6,7 @@ Created on Apr 11, 2015
 from django.forms import Form, ModelForm, CharField, ChoiceField
 from models import SequenceListing, Title, Sequence, Feature, Qualifier 
 import util
+from django.forms.widgets import DateInput
 
 class SequenceListingForm(ModelForm):
     class Meta:
@@ -26,6 +27,7 @@ class SequenceListingForm(ModelForm):
                   'inventorNameLanguageCode', 
                   'inventorNameLatin', 
                   ]
+        
 
 class TitleForm(ModelForm):
     class Meta:

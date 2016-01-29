@@ -10,19 +10,19 @@ class SequenceListing(models.Model):
     dtdVersion = models.CharField('DTD version', max_length=10)
     softwareName = models.CharField('Software name', max_length=50)
     softwareVersion = models.CharField('Software version', max_length=100)
-    productionDate = models.DateTimeField('Production date')
+    productionDate = models.DateField('Production date')
 
 #     xml children (except sequences which are represented as a separate Model)
     
     IPOfficeCode = models.CharField('IP office code', max_length=2)
     applicationNumberText = models.CharField('Application number text', max_length=20)
-    filingDate = models.DateTimeField('Filing date')
+    filingDate = models.DateField('Filing date')
 
     applicantFileReference = models.CharField('Applicant file reference', max_length=30)
     
     earliestPriorityIPOfficeCode = models.CharField('Earliest priority IP office code', max_length=2)
     earliestPriorityApplicationNumberText = models.CharField('Earliest priority application number text', max_length=20)
-    earliestPriorityFilingDate = models.DateTimeField('Earliest priority filing date')
+    earliestPriorityFilingDate = models.DateField('Earliest priority filing date')
 
     applicantName = models.CharField('Applicant name', max_length=200)
     applicantNameLanguageCode = models.CharField('Applicant name language code', max_length=2)
