@@ -78,8 +78,7 @@
         <th>Sequence total quantity</th><td>{{sequencelisting.sequenceTotalQuantity}}</td>
     </tr>
 </table>
-
-<p><a href='/sequencelistings/sl{{sequencelisting.pk}}/add_title/'>Add new title</a></p>
+<p><a href="{% url 'sequencelistings:add_title' sequencelisting.pk %}">Add new title</a></p>
 
 <!-- <p><a href='/sequencelistings/sl{{sequencelisting.pk}}/advanced/'>Advanced</a></p> -->
 
@@ -95,8 +94,8 @@
     </tr>
     {% for seq in sequencelisting.sequence_set.all %}
         <tr>
-            <!-- <td>{{ seq.sequenceIdNo }}</td> -->
-            <td><a href='/sequencelistings/sl{{sequencelisting.pk}}/seq{{seq.pk}}/'>{{ seq.sequenceIdNo }}</a></td>
+            <td><a href="{% url 'sequencelistings:sequence' sequencelisting.pk seq.pk %}">{{ seq.sequenceIdNo }}</a></td>
+            
             <td>{{ seq.moltype }}</td>
             <td>{{ seq.length }}</td>
             <td>
@@ -149,5 +148,5 @@
         </tr>
     {% endfor %}
 </table>
-<p><a href='/sequencelistings/sl{{sequencelisting.pk}}/add_seq/'>Add new sequence</a></p>
+<p><a href="{% url 'sequencelistings:add_seq' sequencelisting.pk %}">Add new sequence</a></p>
 {% endblock child_content %}

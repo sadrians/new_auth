@@ -12,11 +12,11 @@
 <p>Welcome to the xml sequence listing authoring tool.</p>
 
 {% if user.is_authenticated %}
-<a href="/sequencelistings/restricted/">Restricted Page</a><br />
-<a href="/sequencelistings/logout/">Logout</a><br />
+<a href="{% url 'sequencelistings:restricted' %}">Restricted Page</a><br />
+<a href="{% url 'auth_logout' %}?next=/sequencelistings/">Logout</a><br />
 {% else %}
-<a href="/sequencelistings/register/">Register Here</a><br />
-<a href="/sequencelistings/login/">Login</a><br />
+<a href="{% url 'registration_register' %}">Register Here</a><br />
+<a href="{% url 'auth_login' %}">Login</a><br />
 {% endif %}
 
 <p>This is a prototype (so limited functionality!) built only for demonstration purposes. The tool enables the user to:
@@ -60,7 +60,7 @@
 {% if user.is_authenticated %}
     <h2>SEQUENCE LISTING GENERATOR</h2>
     <p>This section enables you to create a new sequence listing.</p>
-    <a href='/sequencelistings/add_sequencelisting/'>Add new sequence listing</a>
+    <a href="{% url 'sequencelistings:add_sequencelisting' %}">Add new sequence listing</a>
 {% endif %}
 
 {% endblock %}

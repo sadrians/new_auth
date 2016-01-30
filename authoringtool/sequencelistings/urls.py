@@ -25,9 +25,9 @@ urlpatterns = patterns('',
         views.add_qualifier, 
         name='add_qualifier'),
     url(r'^sl(?P<pk>\d+)/xmloutput/$', views.generateXml, name='xmloutput'),
-    url(r'^register/$', views.register, name='register'),
-    url(r'^login/$', views.user_login, name='login'),
+#     url(r'^register/$', views.register, name='register'),
+#     url(r'^login/$', views.user_login, name='login'),
     url(r'^restricted/$', views.restricted, name='restricted'),
-    url(r'^logout/$', views.user_logout, name='logout'),
+#     url(r'^logout/$', views.user_logout, name='logout'),
     
 )

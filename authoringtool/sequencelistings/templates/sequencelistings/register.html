@@ -7,7 +7,7 @@
 
     {% if registered %}
     <strong>Thank you for registering!</strong>
-    <a href="/sequencelistings/">Return to the homepage.</a><br />
+    <a href="{% url 'sequencelistings:index' %}">Return to the homepage.</a><br />
     {% else %}
     <strong>Register here!</strong><br />
 
