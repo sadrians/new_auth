@@ -3,12 +3,15 @@ Created on Apr 11, 2015
 
 @author: ad
 '''
-from django.forms import Form, ModelForm, CharField, ChoiceField
+
+from django.forms import Form, ModelForm, CharField, ChoiceField, PasswordInput
+from django.contrib.auth.models import User 
 from models import SequenceListing, Title, Sequence, Feature, Qualifier 
 import util
-from django.forms.widgets import DateInput
 
 class SequenceListingForm(ModelForm):
+#     filingDate = DateField()
+    
     class Meta:
         model = SequenceListing
         fields = [
@@ -106,7 +109,12 @@ class QualifierForm(ModelForm):
 #                   'qualifierName', 
                   'qualifierValue']
 
+class UserForm(ModelForm):
+    password = CharField(widget=PasswordInput())
 
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password')
 
 
 
