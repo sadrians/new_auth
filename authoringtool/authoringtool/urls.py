@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^sequencelistings/', include('sequencelistings.urls', namespace='sequencelistings')),
     url(r'^accounts/register/', MyRegistrationView.as_view(), name='registration_register'),
+#     url(r'^accounts/password/change', MyRegistrationView.as_view(), name='auth_password_change'),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     
 )

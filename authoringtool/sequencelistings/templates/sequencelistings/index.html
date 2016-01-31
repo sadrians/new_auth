@@ -12,11 +12,12 @@
 <p>Welcome to the xml sequence listing authoring tool.</p>
 
 {% if user.is_authenticated %}
-<a href="{% url 'sequencelistings:restricted' %}">Restricted Page</a><br />
-<a href="{% url 'auth_logout' %}?next=/sequencelistings/">Logout</a><br />
+    <a href="{% url 'sequencelistings:restricted' %}">Restricted Page</a><br />
+    <a href="{% url 'auth_logout' %}?next=/sequencelistings/">Logout</a><br />
+    <!-- <a href="{% url 'auth_password_change' %}?next=/sequencelistings/password_change_done/">Change password</a><br /> -->
 {% else %}
-<a href="{% url 'registration_register' %}">Register Here</a><br />
-<a href="{% url 'auth_login' %}">Login</a><br />
+    <a href="{% url 'registration_register' %}">Register Here</a><br />
+    <a href="{% url 'auth_login' %}">Login</a><br />
 {% endif %}
 
 <p>This is a prototype (so limited functionality!) built only for demonstration purposes. The tool enables the user to:
